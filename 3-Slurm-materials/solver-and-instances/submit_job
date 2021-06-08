@@ -1,0 +1,10 @@
+#!/bin/bash
+#SBATCH --chdir="/project/wystack-poptml/hkashgar/3-Slurm-materials/solver-and-instances"
+#SBATCH --account=wystack-poptml
+#SBATCH --time=0-01:00:00
+#SBATCH --partition=teton
+#SBATCH --job-name=instance1-%J
+#SBATCH --output=./instance1-%J.out
+#SBATCH --error=./instance1-%J.error
+
+./abcdsat_r18 instances/instance-3.cnf 
